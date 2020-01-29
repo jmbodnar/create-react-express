@@ -16,7 +16,14 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recipesdb");
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/recipesdb",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
+  () => console.log("DB connected")
+);
 
 // Define API routes here
 
