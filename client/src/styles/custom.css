@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes&display=swap");
+
+body {
+background: linear-gradient(hsla(0, 0%, 100%, 0.8) 0%, hsla(0, 0%, 100%, 0.8) 100%), url("https://source.unsplash.com/random/?seasons") no-repeat fixed center center / cover; padding-top: 2rem;
+}
+
+h1 {
+font-family: "Great Vibes", cursive;
+text-align: center;
+color: red;
+font-size: 6.5em;
+margin-top: 25px;
+}
+
+h2 {
+text-align: center;
+color: red;
+margin-bottom: 4rem;
+font-size: 1.875rem;
+}
+
+.ready {
+align-items: center;
+justify-content: center;
+}
+
+.table-responsive {
+    width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
