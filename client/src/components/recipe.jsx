@@ -5,12 +5,12 @@ import {
   getAllComments,
   getAllUsers,
   getAllCategories
-} from "../../services/api";
+} from "../utilities/api";
 
-import { jsonToDateString } from "../../services/general";
+import { jsonToDateString } from "../utilities/general";
 
 // ----- Components ----- //
-import PageHeader from "../../components/page-header";
+import PageHeader from "./page-header";
 
 class Recipe extends Component {
   state = {

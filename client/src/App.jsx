@@ -6,8 +6,10 @@ import MainHeader from "./components/main-header";
 import Nav from "./components/nav";
 
 // ----- Page Imports ----- //
-import Recipes from "./pages/Recipes";
-import Recipe from "./pages/Recipe";
+// import Recipes from "./pages/Recipes";
+import Recipes from "./components/recipes";
+
+import Recipe from "./components/recipe";
 
 // ----- Main Componentn ----- //
 class App extends Component {
