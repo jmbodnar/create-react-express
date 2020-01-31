@@ -12,9 +12,7 @@ TODO: Update link to recipe page to use unique mongo \_id
 
 ----- Completed -----
 
-DONE: Rename services/ to utilities/, update references
+DONE: Remove all local json-server references
 
-DONE: Remove "pages" directory (for simplicity and clarity)
-
-- Move Recipes.jsx from pages/ to components as recipes.jsx
-- Move Recipe.jsx component from pages/ to components as recipe.jsx
+- Remove dependency
+- Remove script in README.md
