@@ -34,7 +34,7 @@ class Recipes extends Component {
                 return (
                   <tr key={r._id}>
                     <td>
-                      <Link to={"recipes/" + r._id}>{r.title}</Link>
+                      <Link to={"recipe/" + r._id}>{r.title}</Link>
                     </td>
                     <td>{r.category}</td>
                     <td>{r.user.firstname + " " + r.user.lastname}</td>

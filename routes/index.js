@@ -70,7 +70,7 @@ router.post("/recipes", function(req, res, next) {
 });
 
 // Update a recipe in the database
-router.get("/recipes/:id", function(req, res, next) {
+router.get("/recipe/:id", function(req, res, next) {
   Recipe.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function(
     recipe
   ) {
@@ -79,7 +79,7 @@ router.get("/recipes/:id", function(req, res, next) {
 });
 
 // Update a recipe in the database
-router.put("/recipes/:id", function(req, res, next) {
+router.put("/recipe/:id", function(req, res, next) {
   Recipe.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function(
     recipe
   ) {
@@ -88,7 +88,7 @@ router.put("/recipes/:id", function(req, res, next) {
 });
 
 // Delete a recipe from the database
-router.delete("/recipes/:id", function(req, res, next) {
+router.delete("/recipe/:id", function(req, res, next) {
   Recipe.findByIdAndDelete({ _id: req.params.id }).then(function(recipe) {
     res.json(user);
   });
