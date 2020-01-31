@@ -26,6 +26,13 @@ router.post("/users", function(req, res, next) {
 });
 
 // Update a user in the database
+router.get("/users/:id", function(req, res, next) {
+  User.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function(user) {
+    res.json(user);
+  });
+});
+
+// Update a user in the database
 router.put("/users/:id", function(req, res, next) {
   User.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function(user) {
     res.json(user);
@@ -60,6 +67,15 @@ router.post("/recipes", function(req, res, next) {
       res.json(recipe);
     })
     .catch(next);
+});
+
+// Update a recipe in the database
+router.get("/recipes/:id", function(req, res, next) {
+  Recipe.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function(
+    recipe
+  ) {
+    res.json(recipe);
+  });
 });
 
 // Update a recipe in the database
