@@ -41,13 +41,13 @@ class App extends Component {
           <main className="container">
             <Switch>
               <Route exact path="/" component={Recipes} />
-              <Route
+              {/* <Route
                 exact
                 path="/recipes"
                 component={Recipes}
                 data={this.state}
               />
-              <Route path="/recipes/:id" component={Recipe} />
+              <Route path="/recipes/:id" component={Recipe} /> */}
             </Switch>
           </main>
         </Router>
