@@ -1,21 +1,12 @@
-
-
-# GET Categories
-# GET http://localhost:3001/api/categories
-# 
-
 // Post Request to add new User
 POST http://localhost:3001/api/users
 Content-Type: application/json
-
 
 {
     "firstname": "Jon",
     "lastname": "mystery",
     "email": "email@gmailnet.net"
 }
-
-
 
 ###
 
@@ -24,60 +15,30 @@ POST http://localhost:3001/api/recipes
 Content-Type: application/json
 
 {
-"title": "Classic Stuffed Mushrooms",
-"category": "entree",
-"ingredients": ["walnuts", "herbs"," garlic", "chopped mushroom stems", "breadcrumbs", "grated parmesean"],
-"directions": "Separate the stems from the mushroom caps and chop them. Process with herbs and breadcrumbs and stuff the mushroom caps with the mixture. Sprinkle with parmesan and bake until the cheese starts to brown and the mushroom caps release some of their water.",
-"likes": 2,
-"user": { "firstname": "Levar", "lastname":"Burton"},
-"comments": [
-   
-        {"user": "Lavar", "text": "I love it"},
-        {"user": "Jon", "text": "The original's better"}
- 
-]
-}
-
-
-
-
-
-###
-// Post request to add new comments to database
-# POST http://localhost:3000/api/comments
-# Content-Type: application/json
-
-# {
-# "recipeId": 2,
-# "text": "It's good. Really it's the best thing ever. ",
-# "user_id": "5e30ac3f73425c236038686c"
-# }
-
-
-###
-
-
-// Post Request to add categories to database
-// Only run once. We only allow three categories 
-POST http://localhost:3001/api/categories
-Content-Type: application/json
-
-{
-"title": "entree"
-}
-
-#
-POST http://localhost:3001/api/categories
-Content-Type: application/json
-
-{
-"title": "side dish"
-}
-
-#
-POST http://localhost:3001/api/categories
-Content-Type: application/json
-
-{
-"title": "dessert"
+    "title": "Classic Stuffed Mushrooms",
+    "category": "entree",
+    "ingredients": [
+        "walnuts",
+        "herbs",
+        " garlic",
+        "chopped mushroom stems",
+        "breadcrumbs",
+        "grated parmesean"
+    ],
+    "directions": "Separate the stems from the mushroom caps and chop them. Process with herbs and breadcrumbs and stuff the mushroom caps with the mixture. Sprinkle with parmesan and bake until the cheese starts to brown and the mushroom caps release some of their water.",
+    "likes": 2,
+    "user": {
+        "firstname": "Levar",
+        "lastname": "Burton"
+    },
+    "comments": [
+        {
+            "user": "Lavar",
+            "text": "I love it"
+        },
+        {
+            "user": "Jon",
+            "text": "The original's better"
+        }
+    ]
 }
