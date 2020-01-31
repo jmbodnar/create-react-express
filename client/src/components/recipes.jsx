@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { getAllData } from "../../services/api";
+import { getAllData } from "../utilities/api";
 
 // ----- Components ----- //
-import PageHeader from "../../components/page-header";
+import PageHeader from "./page-header";
 
 class Recipes extends Component {
   state = {
