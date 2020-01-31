@@ -13,23 +13,18 @@ const RecipeSchema = new Schema({
   },
 
   user: {
-    
-      firstname:{
-        type: String
-      },
-      lastname: {
-        type: String
-      }
-    
+    firstname: {
+      type: String
+    },
+    lastname: {
+      type: String
+    }
   },
 
-  ingredients: 
-  [
-    
+  ingredients: [
     {
       type: String
     }
-    
   ],
 
   directions: {
@@ -40,19 +35,17 @@ const RecipeSchema = new Schema({
     type: Number
   },
 
-  comments: 
-    [
-      {
-      
-        user: {
-          type: String
-        },
+  comments: [
+    {
+      user: {
+        type: String
+      },
 
-        text: {
-          type: String
-        }
+      text: {
+        type: String
       }
-    ],
+    }
+  ],
 
   dateAdded: {
     type: Date,
