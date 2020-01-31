@@ -6,10 +6,8 @@ import MainHeader from "./components/main-header";
 import Nav from "./components/nav";
 
 // ----- Page Imports ----- //
-import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import Recipe from "./pages/Recipe";
-import About from "./pages/About";
 
 // ----- Main Componentn ----- //
 class App extends Component {
@@ -35,12 +33,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Router basename="/router-practice/">
+        <Router>
           <MainHeader />
           <Nav />
           <main className="container">
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Recipes} />
               <Route
                 exact
                 path="/recipes"
@@ -48,7 +46,6 @@ class App extends Component {
                 data={this.state}
               />
               <Route path="/recipes/:id" component={Recipe} />
-              <Route exact path="/about" component={About} />
             </Switch>
           </main>
         </Router>
