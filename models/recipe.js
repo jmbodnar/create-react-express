@@ -8,17 +8,29 @@ const RecipeSchema = new Schema({
     type: String
   },
 
-  categoryId: {
-    type: Number
-  },
-
-  mainIngredient: {
+  category: {
     type: String
   },
 
-  ingredients: {
-    type: String
+  user: {
+    
+      firstname:{
+        type: String
+      },
+      lastname: {
+        type: String
+      }
+    
   },
+
+  ingredients: 
+  [
+    
+    {
+      type: String
+    }
+    
+  ],
 
   directions: {
     type: String
@@ -28,9 +40,19 @@ const RecipeSchema = new Schema({
     type: Number
   },
 
-  userId: {
-    type: Number
-  },
+  comments: 
+    [
+      {
+      
+        user: {
+          type: String
+        },
+
+        text: {
+          type: String
+        }
+      }
+    ],
 
   dateAdded: {
     type: Date,

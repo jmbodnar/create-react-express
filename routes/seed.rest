@@ -5,33 +5,39 @@
 # 
 
 // Post Request to add new User
-# POST http://localhost:3001/api/users
-# Content-Type: application/json
+POST http://localhost:3001/api/users
+Content-Type: application/json
 
 
-# {
-#     "firstname": "Lavar",
-#     "lastname": "password",
-#     "email": "email@email.net"
-# }
+{
+    "firstname": "Jon",
+    "lastname": "mystery",
+    "email": "email@gmailnet.net"
+}
 
 
 
 ###
 
 // Post request to add new recipe to database
-# POST http://localhost:3000/api/recipes
-# Content-Type: application/json
+POST http://localhost:3001/api/recipes
+Content-Type: application/json
 
-# {
-# "title": "Classic Stuffed Mushrooms",
-# "categoryId": 1,
-# "mainIngredient": "mushrooms",
-# "ingredients": "walnuts, herbs, garlic, chopped mushroom stems, breadcrumbs, grated parmesean",
-# "directions": "Separate the stems from the mushroom caps and chop them. Process with herbs and breadcrumbs and stuff the mushroom caps with the mixture. Sprinkle with parmesan and bake until the cheese starts to brown and the mushroom caps release some of their water.",
-# "likes": 2,
-# "userId": 1
-# }
+{
+"title": "Classic Stuffed Mushrooms",
+"category": "entree",
+"ingredients": ["walnuts", "herbs"," garlic", "chopped mushroom stems", "breadcrumbs", "grated parmesean"],
+"directions": "Separate the stems from the mushroom caps and chop them. Process with herbs and breadcrumbs and stuff the mushroom caps with the mixture. Sprinkle with parmesan and bake until the cheese starts to brown and the mushroom caps release some of their water.",
+"likes": 2,
+"user": { "firstname": "Levar", "lastname":"Burton"},
+"comments": [
+   
+        {"user": "Lavar", "text": "I love it"},
+        {"user": "Jon", "text": "The original's better"}
+ 
+]
+}
+
 
 
 

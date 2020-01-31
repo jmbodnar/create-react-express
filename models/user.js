@@ -26,17 +26,9 @@ const UserSchema = new Schema({
   dateAdded: {
     type: Date,
     default: Date.now
-  },
+  }
 
-  likedRecipes: {},
-  comments: [
-    {
-      // Store ObjectIds in the array
-      type: Schema.Types.ObjectId,
-      // The ObjectIds will refer to the ids in the Note model
-      ref: "Comment"
-    }
-  ]
+ 
 });
 
 const User = mongoose.model("user", UserSchema);
