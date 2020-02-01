@@ -18,7 +18,7 @@ It all happens in `/client/src`
 
 Try to use the [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) methodology for development. It'll help us keep our wires from getting crossed. Don't worry about the GitFlow tool. Just use the general method. 
 
-Keep `master` as our "It's really all working and good to go branch".  Create personal development branches off of `develop`. For example, If I'm working on a registration form, I'd create a personal feature branch called `jon/user-form` (or whatever) and work in there. When it feels good to go, I'd merge into develop (after updating my development branch) and test there. If it's all good and done, I'd then to a pull request on master from develop. 
+Keep `master` as our it-is-really-working-and-good-to-go branch; it's a protectd branch and requires one review.  Create personal development branches off of `develop`. For example, If I'm working on a registration form, I'd create a personal feature branch called `jon/user-form` (or whatever) and work in there. When it feels good to go, I'd merge into develop (after updating my development branch) and test there. If it's all good and done, I'd then to a pull request on master from develop. 
 
 ### Seeding the Dev Database
 
@@ -38,7 +38,7 @@ TODO: As a user I can register/login
 
 TODO: As a user I can comment on a recipe
 
-TODO: As a user I can do stuff with the table of recipes (sorting, etc.)—Try implementing with react or we can use data tables...
+TODO: As a user I can do stuff with the table of recipes (sorting, etc.)—Try implementing with React or we can use data tables... (Maybe do DT and then try a React version? I don't know. Whatever's easier now.)
 
 TODO: Deploy to and test/troubleshoot Heroku
 
