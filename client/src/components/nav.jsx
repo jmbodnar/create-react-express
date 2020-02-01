@@ -11,6 +11,16 @@ const Nav = props => {
               All Recipes
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/add-recipe" className="nav-link">
+              Add Your Recipe!
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/add-user" className="nav-link">
+              Add Yourself!
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

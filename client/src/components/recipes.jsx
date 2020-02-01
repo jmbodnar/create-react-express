@@ -18,7 +18,7 @@ class Recipes extends Component {
     const { recipes } = this.state;
     return (
       <React.Fragment>
-        <PageHeader title="Recipes" />
+        <PageHeader title="All Recipes" />
         <div className="table-responsive">
           <table className="table table-striped table-borderless table-hover">
             <thead className="thead-light">

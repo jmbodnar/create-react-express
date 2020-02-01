@@ -4,6 +4,8 @@ import MainHeader from "./components/main-header";
 import Nav from "./components/nav";
 import Recipes from "./components/recipes";
 import Recipe from "./components/recipe";
+import RecipeForm from './components/recipe-form';
+import UserForm from './components/user-form';
 
 class App extends Component {
 
@@ -17,6 +19,8 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Recipes} />
               <Route path="/recipe/:id" component={Recipe} />
+              <Route path="/add-recipe" component={RecipeForm} />
+              <Route path="/add-user" component={UserForm} />
             </Switch>
           </main>
         </Router>
