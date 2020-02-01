@@ -1,32 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
-import { getAllData } from "../../services/api";
-
-// ----- Components ----- //
-import PageHeader from "../../components/page-header";
+import { getRecipes } from "../utilities/api";
+import PageHeader from "./page-header";
 
 class Recipes extends Component {
   state = {
-    recipes: [],
-    categories: [],
-    users: []
-  };
-
-  /**
-   * Match recipe's categoryId to category's _id, return category's title
-   * @param {Number | String}
-   * @returns {String} Category's title string
-   */
-  getCategoryTitle = id => {
-    const [category] = this.state.categories.filter(c => Number(id) === c._id);
-    return category.title;
+    recipes: []
   };
 
   componentDidMount() {
-    getAllData().then(data => {
-      const { recipes, categories, users } = data;
-      this.setState({ recipes, categories, users });
+    getRecipes().then(recipes => {
+      this.setState({ recipes });
     });
   }
 
@@ -34,14 +18,14 @@ class Recipes extends Component {
     const { recipes } = this.state;
     return (
       <React.Fragment>
-        <PageHeader title="Recipes" />
+        <PageHeader title="All Recipes" />
         <div className="table-responsive">
           <table className="table table-striped table-borderless table-hover">
             <thead className="thead-light">
               <tr>
                 <th>Title</th>
-                <th>Main Ingredient</th>
                 <th>Category</th>
+                <th>User</th>
                 <th>Likes</th>
               </tr>
             </thead>
@@ -50,10 +34,10 @@ class Recipes extends Component {
                 return (
                   <tr key={r._id}>
                     <td>
-                      <Link to={"recipes/" + r._id}>{r.title}</Link>
+                      <Link to={"recipe/" + r._id}>{r.title}</Link>
                     </td>
-                    <td>{r.mainIngredient}</td>
-                    <td>{this.getCategoryTitle(r.categoryId)}</td>
+                    <td>{r.category}</td>
+                    <td>{r.user.firstname + " " + r.user.lastname}</td>
                     <td>{r.likes}</td>
                   </tr>
                 );

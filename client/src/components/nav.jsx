@@ -7,13 +7,18 @@ const Nav = props => {
       <div className="container collapse navbar-collapse">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/recipes" className="nav-link">
-              Recipes
+            <Link to="/" className="nav-link">
+              All Recipes
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link">
-              About
+            <Link to="/add-recipe" className="nav-link">
+              Add Your Recipe!
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/add-user" className="nav-link">
+              Add Yourself!
             </Link>
           </li>
         </ul>
