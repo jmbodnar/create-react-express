@@ -12,6 +12,11 @@ const Nav = props => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/recipes2" className="nav-link">
+              recipes2.jsx
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/add-recipe" className="nav-link">
               Add Your Recipe!
             </Link>
