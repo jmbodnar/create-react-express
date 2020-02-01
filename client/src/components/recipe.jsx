@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import { getRecipeId } from "../utilities/api";
-
 import { jsonToDateString } from "../utilities/general";
 
 // ----- Components ----- //
@@ -19,7 +17,6 @@ class Recipe extends Component {
   // ----- Calling ----- //
   componentDidMount() {
     getRecipeId(this.props.match.params.id).then(recipe => {
-      console.log(recipe);
       this.setState({ recipe });
     });
   }
