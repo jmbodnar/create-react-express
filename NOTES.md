@@ -10,6 +10,10 @@ Beware changing layout in the beginning. I tried to use semantic/meaningful and 
 
 ## General Development Notes
 
+### Problems!
+
+We (or I) encuntered a CORS problem with requests from React to Node/Express. I didn't know how to address them directly. I'll ask Stanley today about that. In the short-term, you can (somewhat ill-advisedly) install [Moesif Origins & CORS Changer add on](https://addons.mozilla.org/en-US/firefox/addon/moesif-origin-cors-changer1/) for FireFox or the [Chrome version](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc).
+
 ### Front End Work
 
 It all happens in `/client/src`
