@@ -4,11 +4,11 @@ import MainHeader from "./components/main-header";
 import Nav from "./components/nav";
 import Recipes from "./components/recipes";
 import Recipe from "./components/recipe";
-import RecipeForm from './components/recipe-form';
-import UserForm from './components/user-form';
+import RecipeForm from "./components/recipe-form";
+import UserForm from "./components/user-form";
+import Recipes2 from "./components/recipes2";
 
 class App extends Component {
-
   render() {
     return (
       <div>
@@ -18,6 +18,7 @@ class App extends Component {
           <main className="container">
             <Switch>
               <Route exact path="/" component={Recipes} />
+              <Route exact path="/recipes2" component={Recipes2} />
               <Route path="/recipe/:id" component={Recipe} />
               <Route path="/add-recipe" component={RecipeForm} />
               <Route path="/add-user" component={UserForm} />
