@@ -30,6 +30,7 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/recipesdb",
   {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
     useUnifiedTopology: true
   },
   () => console.log("DB connected")
@@ -37,6 +38,8 @@ mongoose.connect(
 
 // Define API routes here
 app.use("/api", routes);
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 // Send every other request to the React app
 // Define any API routes before this runs
