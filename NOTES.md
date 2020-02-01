@@ -12,7 +12,9 @@ Beware changing layout in the beginning. I tried to use semantic/meaningful and 
 
 ### Problems!
 
-We (or I) encuntered a CORS problem with requests from React to Node/Express. I didn't know how to address them directly. I'll ask Stanley today about that. In the short-term, you can (somewhat ill-advisedly) install [Moesif Origins & CORS Changer add on](https://addons.mozilla.org/en-US/firefox/addon/moesif-origin-cors-changer1/) for FireFox or the [Chrome version](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc).
+We addressed CORS issue with the [cors package](https://www.npmjs.com/package/cors)
+
+RESOLVED: We (or I) encuntered a CORS problem with requests from React to Node/Express. I didn't know how to address them directly. I'll ask Stanley today about that. In the short-term, you can (somewhat ill-advisedly) install [Moesif Origins & CORS Changer add on](https://addons.mozilla.org/en-US/firefox/addon/moesif-origin-cors-changer1/) for FireFox or the [Chrome version](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc).
 
 ### Front End Work
 
@@ -20,9 +22,9 @@ It all happens in `/client/src`
 
 ### Branches & Merging (GitFlow)
 
-Try to use the [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) methodology for development. It'll help us keep our wires from getting crossed. Don't worry about the GitFlow tool. Just use the general method. 
+Try to use the [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) methodology for development. It'll help us keep our wires from getting crossed. Don't worry about the GitFlow tool. Just use the general method.
 
-Keep `master` as our it-is-really-working-and-good-to-go branch; it's a protectd branch and requires one review.  Create personal development branches off of `develop`. For example, If I'm working on a registration form, I'd create a personal feature branch called `jon/user-form` (or whatever) and work in there. When it feels good to go, I'd merge into develop (after updating my development branch) and test there. If it's all good and done, I'd then to a pull request on master from develop. 
+Keep `master` as our it-is-really-working-and-good-to-go branch; it's a protectd branch and requires one review. Create personal development branches off of `develop`. For example, If I'm working on a registration form, I'd create a personal feature branch called `jon/user-form` (or whatever) and work in there. When it feels good to go, I'd merge into develop (after updating my development branch) and test there. If it's all good and done, I'd then to a pull request on master from develop.
 
 ### Seeding the Dev Database
 
@@ -55,4 +57,3 @@ TODO: As a user I can like a recipe
 TODO: As a user I can only view comments and add a recipe and comment on a recipe if I am registered and currently logged in
 
 ### Completed To-Dos
-
