@@ -8,6 +8,11 @@ const RecipeSchema = new Schema({
     type: String
   },
 
+  dateAdded: {
+    type: Date,
+    default: Date.now
+  },
+
   category: {
     type: String
   },
@@ -43,14 +48,13 @@ const RecipeSchema = new Schema({
 
       text: {
         type: String
+      },
+      dateAdded: {
+        type: Date,
+        default: Date.now
       }
     }
-  ],
-
-  dateAdded: {
-    type: Date,
-    default: Date.now
-  }
+  ]
 });
 
 const Recipe = mongoose.model("recipe", RecipeSchema);

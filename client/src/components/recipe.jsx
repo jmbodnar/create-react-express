@@ -10,18 +10,16 @@ import PageHeader from "./page-header";
 class Recipe extends Component {
   state = {
     recipe: {
-      user: {
-        firstname: "",
-        lastname: ""
-      },
-      comments: [],
-      ingredients: []
+      user: {},
+      ingredients: [],
+      comments: []
     }
   };
 
   // ----- Calling ----- //
   componentDidMount() {
     getRecipeId(this.props.match.params.id).then(recipe => {
+      console.log(recipe);
       this.setState({ recipe });
     });
   }
@@ -39,13 +37,7 @@ class Recipe extends Component {
               <dd>{recipe.directions}</dd>
 
               <dt>Added by</dt>
-              <dd>
-                {recipe.user.firstname +
-                  " " +
-                  recipe.user.lastname +
-                  " | " +
-                  jsonToDateString(recipe.dateAdded)}
-              </dd>
+              <dd>{recipe.user.firstname + " " + recipe.user.lastname}</dd>
             </dl>
           </div>
           <div className="col-sm-4">
@@ -54,17 +46,9 @@ class Recipe extends Component {
               <dd>{recipe.category}</dd>
 
               <dt>Ingredients</dt>
-              <dd>
-                {/* <ul>
-                  {recipe.ingredients.map((ingredient, idx) => {
-                    return <li key={idx}>{ingredient}</li>;
-                  })}
-                </ul> */}
-                {recipe.ingredients.join(", ")}
-              </dd>
-
-              <dt>Creator</dt>
-              <dd>{recipe.user.firstname + " " + recipe.user.lastname}</dd>
+              <dd>{recipe.ingredients.join(", ")}</dd>
+              <dt>Date Added</dt>
+              <dd>{jsonToDateString(recipe.dateAdded)}</dd>
             </dl>
           </div>
         </section>
