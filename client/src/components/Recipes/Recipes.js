@@ -61,8 +61,7 @@ class Recipes extends Component {
         </div>
 
         <div>
-        <button class="btn btn-danger" data-toggle="tooltip" title="Impress Me">
-  Add Recipe<a href="/add-recipe{{add-recipe}}"></a></button>
+        <a href="/AddRecipe" className="btn btn-danger" data-toggle="tooltip" title="Impress Me" type="submit">Add Recipe</a>
 {/* button needs to locate to bottom right */}
         </div>
       </React.Fragment>

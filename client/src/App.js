@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Recipe from './components/Recipe/Recipe';
 import Recipes from './components/Recipes/Recipes';
 import NotFound from './components/NotFound/NotFound';
+import AddRecipe from './components/AddRecipe/AddRecipe';
 import './styles/custom.css';
 
 
@@ -29,6 +30,7 @@ function App() {
           {/* <Route path='/recipe' component={Recipe} /> */}
           <Route path='/allrecipes' component={Recipes} />
           <Route path='/recipe/' component={Recipe} />
+          <Route path='/Addrecipe/' component={AddRecipe} />
           <Route path='*' component={NotFound} />
         </Switch>
 
