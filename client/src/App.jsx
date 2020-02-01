@@ -9,6 +9,10 @@ import UserForm from "./components/user-form";
 import Recipes2 from "./components/recipes2";
 
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
+  
   render() {
     return (
       <div>
