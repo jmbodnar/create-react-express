@@ -3,9 +3,9 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-    "firstname": "Jon",
-    "lastname": "mystery",
-    "email": "email@gmailnet.net"
+    "firstname": "aruna",
+    "lastname": "password1",
+    "email": "email@gmail.net"
 }
 
 ###
