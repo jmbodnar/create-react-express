@@ -22,7 +22,7 @@ class CommentForm extends Component {
 
   render() {
     return (
-      <div className="m-4">
+      <div className="my-4">
         <PageHeader title="Add Your Comment" />
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div className="form-group">
