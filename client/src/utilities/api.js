@@ -6,7 +6,7 @@ export async function getRecipes() {
   }
 }
 
-export async function getRecipeId(id) {
+export async function getRecipeById(id) {
   try {
     return (await fetch(`/api/recipe/${id}`)).json();
   } catch (error) {
@@ -14,9 +14,9 @@ export async function getRecipeId(id) {
   }
 }
 
-export async function addRecipeComment(id, commentData) {
+export async function addRecipeComment(recipeId, commentData) {
   try {
-    return await fetch(`/api/comment/${id}`, {
+    return await fetch(`/api/comment/${recipeId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -4,30 +4,28 @@ import { addRecipeComment } from "../utilities/api";
 
 class CommentForm extends Component {
   state = {
-    recipeId: this.props.recipeId
+    commentData: {
+      user: "Test"
+    }
   };
 
   handleChange = function(event) {
+    const { commentData } = this.state;
     let prop = event.target.name;
-    let value = event.target.value;
-    this.setState({ [prop]: value });
-  };
-
-  handleSubmit = function(event) {
-    event.preventDefault();
-    const { recipeId, email, firstname, lastname, text } = this.state;
-    const data = { email, user: `${firstname} ${lastname}`, text };
-
-    addRecipeComment(recipeId, data).then(response => {
-      console.log(response);
-    });
+    commentData[event.target.name] = event.target.value;
+    this.setState({ commentData });
   };
 
   render() {
+    const { commentData } = this.state;
+    const { recipeId, handleSubmission } = this.props;
+
     return (
       <div className="my-4">
         <PageHeader title="Add Your Comment" />
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form
+          onSubmit={event => handleSubmission(event, recipeId, commentData)}
+        >
           <div className="form-group">
             <label htmlFor="email">Your Email Address</label>
             <input
@@ -36,24 +34,27 @@ class CommentForm extends Component {
               id="email"
               className="form-control"
               onChange={this.handleChange.bind(this)}
+              required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="firstname">Your First Name</label>
+            <label htmlFor="userFname">Your First Name</label>
             <input
               type="text"
-              name="firstname"
-              id="firstname"
+              name="userFname"
+              id="userFname"
               className="form-control"
+              required
               onChange={this.handleChange.bind(this)}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="lastname">Your Last Name</label>
+            <label htmlFor="userLname">Your Last Name</label>
             <input
               type="text"
-              name="lastname"
-              id="lastname"
+              name="userLname"
+              id="userLname"
+              required
               className="form-control"
               onChange={this.handleChange.bind(this)}
             />
@@ -65,6 +66,7 @@ class CommentForm extends Component {
               id="text"
               rows="3"
               name="text"
+              required
               onChange={this.handleChange.bind(this)}
             ></textarea>
           </div>
