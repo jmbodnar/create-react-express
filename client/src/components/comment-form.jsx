@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PageHeader from "./page-header";
+import { addRecipeComment } from "../utilities/api";
 
 class CommentForm extends Component {
   state = {
@@ -14,10 +15,12 @@ class CommentForm extends Component {
 
   handleSubmit = function(event) {
     event.preventDefault();
-    const { recipeId, email, firstname, lastname, comment } = this.state;
-    console.log(
-      `ID: ${recipeId}\nEMAIL: ${email}\nFIRSTNAME: ${firstname}\nLASTNAME: ${lastname}\nCOMMENT: ${comment}\n`
-    );
+    const { recipeId, email, firstname, lastname, text } = this.state;
+    const data = { email, user: `${firstname} ${lastname}`, text };
+
+    addRecipeComment(recipeId, data).then(response => {
+      console.log(response);
+    });
   };
 
   render() {
@@ -59,8 +62,9 @@ class CommentForm extends Component {
             <label htmlFor="comment-text">Your Comment</label>
             <textarea
               className="form-control"
-              id="exampleFormControlTextarea1"
+              id="text"
               rows="3"
+              name="text"
               onChange={this.handleChange.bind(this)}
             ></textarea>
           </div>

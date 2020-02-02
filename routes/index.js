@@ -111,7 +111,7 @@ router.post("/comment/:id", function(req, res, next) {
     { $push: { comments: req.body } },
     { useFindAndModify: false }
   ).then(function(recipe) {
-    res.json(recipe);
+    res.json(recipe.comments);
   });
 });
 

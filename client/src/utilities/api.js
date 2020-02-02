@@ -13,3 +13,17 @@ export async function getRecipeId(id) {
     console.error(error);
   }
 }
+
+export async function addRecipeComment(id, commentData) {
+  try {
+    return await fetch(`/api/comment/${id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(commentData)
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}

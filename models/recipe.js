@@ -46,6 +46,10 @@ const RecipeSchema = new Schema({
         type: String
       },
 
+      email: {
+        type: String
+      },
+
       text: {
         type: String
       },

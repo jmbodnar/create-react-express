@@ -4,7 +4,7 @@ import { jsonToDateString } from "../utilities/general";
 
 // ----- Components ----- //
 import PageHeader from "./page-header";
-import CommentForm from './comment-form';
+import CommentForm from "./comment-form";
 
 class Recipe extends Component {
   state = {
@@ -60,7 +60,7 @@ class Recipe extends Component {
                   {comment.user} ({jsonToDateString(comment.dateAdded)})
                 </summary>
                 <div>
-                  <p>{comment.text}</p>
+                  <p className="mt-3 mb-0">{comment.text}</p>
                 </div>
               </details>
             );
