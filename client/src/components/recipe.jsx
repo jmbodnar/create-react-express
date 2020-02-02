@@ -4,6 +4,7 @@ import { jsonToDateString } from "../utilities/general";
 
 // ----- Components ----- //
 import PageHeader from "./page-header";
+import CommentForm from './comment-form';
 
 class Recipe extends Component {
   state = {
@@ -23,6 +24,7 @@ class Recipe extends Component {
 
   render() {
     const { recipe } = this.state;
+    const recipeId = this.props.match.params.id;
 
     return (
       <React.Fragment>
@@ -64,6 +66,7 @@ class Recipe extends Component {
             );
           })}
         </section>
+        <CommentForm recipeId={recipeId} />
       </React.Fragment>
     );
   }
