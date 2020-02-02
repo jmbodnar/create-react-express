@@ -13,17 +13,17 @@ const path = require("path");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const corsOpts = {
-  origin: "*",
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"]
-};
+// const corsOpts = {
+//   origin: "*",
+//   methods: ["GET", "POST"],
+//   allowedHeaders: ["Content-Type"]
+// };
 
-app.use(cors(corsOpts));
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// app.use(cors(corsOpts));
+// // Serve up static assets (usually on heroku)
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
 
 // Connect to MongoDB
 mongoose.connect(
