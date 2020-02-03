@@ -32,28 +32,3 @@ If you install the [REST Client VS Code extension](https://marketplace.visualstu
 
 ## Deployment Notes
 
-I don't know how to deploy to Heroku. Help! (JMB)
-
-## To-Dos
-
-### Primary To-Dos
-
-TODO: As a user I can add a recipe to the db
-
-TODO: As a user I can register/login
-
-TODO: As a user I can comment on a recipe
-
-TODO: As a user I can do stuff with the table of recipes (sorting, etc.)—Try implementing with React or we can use data tables... (Maybe do DT and then try a React version? I don't know. Whatever's easier now.)
-
-TODO: Deploy to and test/troubleshoot Heroku
-
-TODO: Address CORS issue or local development. In the short-term, you can (somewhat ill-advisedly) install [Moesif Origins & CORS Changer add on](https://addons.mozilla.org/en-US/firefox/addon/moesif-origin-cors-changer1/) for FireFox or the [Chrome version](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc).
-
-### Secondary To-Dos
-
-TODO: As a user I can like a recipe
-
-TODO: As a user I can only view comments and add a recipe and comment on a recipe if I am registered and currently logged in
-
-### Completed To-Dos
