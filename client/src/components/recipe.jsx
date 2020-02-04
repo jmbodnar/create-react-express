@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { getRecipeId } from "../utilities/api";
+import { getRecipeById, addRecipeComment } from "../utilities/api";
 import { jsonToDateString } from "../utilities/general";
 
 // ----- Components ----- //
 import PageHeader from "./page-header";
+import CommentForm from "./comment-form";
 
 class Recipe extends Component {
   state = {
@@ -14,15 +15,28 @@ class Recipe extends Component {
     }
   };
 
+  handleSubmission = (event, recipeId, commentData) => {
+    event.preventDefault();
+
+    addRecipeComment(recipeId, commentData).then(() => {
+      getRecipeById(recipeId).then(recipe => {
+        this.setState({ recipe });
+      });
+    });
+
+    event.target.reset();
+  };
+
   // ----- Calling ----- //
   componentDidMount() {
-    getRecipeId(this.props.match.params.id).then(recipe => {
+    getRecipeById(this.props.match.params.id).then(recipe => {
       this.setState({ recipe });
     });
   }
 
   render() {
     const { recipe } = this.state;
+    const recipeId = this.props.match.params.id;
 
     return (
       <React.Fragment>
@@ -55,15 +69,21 @@ class Recipe extends Component {
             return (
               <details className="mb-1 alert alert-secondary" key={idx}>
                 <summary>
-                  {comment.user} ({jsonToDateString(comment.dateAdded)})
+                  {comment.userFname ? comment.userFname : comment.user}{" "}
+                  {comment.userLname ? comment.userLname : null} (
+                  {jsonToDateString(comment.dateAdded)})
                 </summary>
                 <div>
-                  <p>{comment.text}</p>
+                  <p className="mt-3 mb-0">{comment.text}</p>
                 </div>
               </details>
             );
           })}
         </section>
+        <CommentForm
+          recipeId={recipeId}
+          handleSubmission={this.handleSubmission}
+        />
       </React.Fragment>
     );
   }
