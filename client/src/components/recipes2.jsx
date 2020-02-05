@@ -31,6 +31,7 @@ class Recipes2 extends Component {
             </thead>
             <tbody>
               {recipes.map(r => {
+                if(r.user){
                 return (
                   <tr key={r._id}>
                     <td>
@@ -41,6 +42,7 @@ class Recipes2 extends Component {
                     <td>{r.likes}</td>
                   </tr>
                 );
+              }
               })}
             </tbody>
           </table>
