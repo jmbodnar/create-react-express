@@ -7,7 +7,7 @@ const auth = require('../../middleware/auth');
 
 
 // User Model
-const User = require('../../models/User');
+const user = require('../../models/user');
 
 // @route   POST api/auth
 // @desc    Auth user
@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
   }
 
   // Check for existing user
-  User.findOne({ email })
+  user.findOne({ email })
     .then(user => {
       if(!user) return res.status(400).json({ msg: 'User Does not exist' });
 
@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
 // @desc    Get user data
 // @access  Private
 router.get('/user', auth, (req, res) => {
-  User.findById(req.user.id)
+  user.findById(req.user.id)
     .select('-password')
     .then(user => res.json(user));
 });

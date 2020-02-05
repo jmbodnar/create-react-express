@@ -16,9 +16,9 @@ import PropTypes from 'prop-types';
 import { login } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 
-class loginModel extends Component {
+class LoginModal extends Component {
   state = {
-    model: false,
+    modal: false,
     email: '',
     password: '',
     msg: null
@@ -43,7 +43,7 @@ class loginModel extends Component {
     }
 
     // If authenticated, close model
-    if (this.state.model) {
+    if (this.state.modal) {
       if (isAuthenticated) {
         this.toggle();
       }
@@ -54,7 +54,7 @@ class loginModel extends Component {
     // Clear errors
     this.props.clearErrors();
     this.setState({
-      model: !this.state.model
+      modal: !this.state.modal
     });
   };
 
@@ -83,9 +83,9 @@ class loginModel extends Component {
           Login
         </NavLink>
 
-        <Model isOpen={this.state.model} toggle={this.toggle}>
-          <ModelHeader toggle={this.toggle}>Login</ModelHeader>
-          <ModelBody>
+        <Modal isOpen={this.state.model} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>Login</ModalHeader>
+          <ModalBody>
             {this.state.msg ? (
               <Alert color='danger'>{this.state.msg}</Alert>
             ) : null}
@@ -115,8 +115,8 @@ class loginModel extends Component {
                 </Button>
               </FormGroup>
             </Form>
-          </ModelBody>
-        </Model>
+          </ModalBody>
+        </Modal>
       </div>
     );
   }
@@ -130,4 +130,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { login, clearErrors }
-)(loginModel);
+)(LoginModal);

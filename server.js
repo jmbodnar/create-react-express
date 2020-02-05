@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to MongoDB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/recipesdb",
+  process.env.MONGODB_URI || "mongodb://localhost:27017/recipesdb",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

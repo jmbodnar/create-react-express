@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
 import { register } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 
-class registerModel extends Component {
+class RegisterModal extends Component {
   state = {
     modal: false,
     name: '',
@@ -86,9 +86,9 @@ class registerModel extends Component {
           Register
         </NavLink>
 
-        <Model isOpen={this.state.modal} toggle={this.toggle}>
-          <ModelHeader toggle={this.toggle}>Register</ModelHeader>
-          <ModelBody>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>Register</ModalHeader>
+          <ModalBody>
             {this.state.msg ? (
               <Alert color='danger'>{this.state.msg}</Alert>
             ) : null}
@@ -128,8 +128,8 @@ class registerModel extends Component {
                 </Button>
               </FormGroup>
             </Form>
-          </ModelBody>
-        </Model>
+          </ModalBody>
+        </Modal>
       </div>
     );
   }
@@ -143,4 +143,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { register, clearErrors }
-)(registerModel);
+)(RegisterModal);

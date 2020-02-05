@@ -3,18 +3,18 @@ const Schema = mongoose.Schema;
 
 // Create User Schema and Model
 
-const UserSchema = new Schema({
-  firstname: {
+const userSchema = new Schema({
+  name: {
     type: String,
     required: [true, "Name is required"],
     min: 2
   },
 
-  lastname: {
-    type: String,
-    required: [true, "last name is required"],
-    min: 2
-  },
+  // lastname: {
+  //   type: String,
+  //   required: [true, "last name is required"],
+  //   min: 2
+  // },
 
   email: {
     type: String,
@@ -29,6 +29,6 @@ const UserSchema = new Schema({
   }
 });
 
-const User = mongoose.model("user", UserSchema);
+const user = mongoose.model("user", userSchema);
 
-module.exports = User;
+module.exports = user;
