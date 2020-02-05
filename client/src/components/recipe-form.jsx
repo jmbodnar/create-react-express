@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PageHeader from "./page-header";
+// import PageHeader from "./page-header";
 import axios from "axios";
 
 class RecipeForm extends Component {
@@ -43,12 +43,15 @@ class RecipeForm extends Component {
     category: this.state.category,
     directions: this.state.directions
   }
-    axios.post("http://localhost:3001/api/recipes", recipe)
+    axios.post("/api/recipes", recipe)
     .then(res =>{
       console.log(res);
       console.log(res.data);
+    })
+    .then(()=>{
+      this.props.history.replace("/");
     });
-  }
+  };
 
   render() {
     return (
@@ -57,7 +60,7 @@ class RecipeForm extends Component {
       // </React.Fragment>
       <div className="container my-5">
       <h2>Add Your Own Recipe</h2>
-      <form>
+      <form onSubmit={this.handleFormSubmit}>
         <fieldset>
           <legend>Your Information</legend>
           <div className="row">
@@ -152,7 +155,7 @@ class RecipeForm extends Component {
             <textarea className="form-control" id="directions" name="directions" rows="7" onChange={this.handleInputChange} required></textarea>
           </div>
         </fieldset>
-        <input type="submit" value="Add Your Recipe" className="btn btn-danger btn-block" onClick={this.handleFormSubmit} />
+        <input type="submit" value="Add Your Recipe" className="btn btn-danger btn-block"  />
       </form>
     </div>
   
