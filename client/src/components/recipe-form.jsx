@@ -8,7 +8,6 @@ class RecipeForm extends Component {
     last_name: "",
     email: "",
     title: "",
-    //
     ingredients: "",
     directions: "",
     category: "entree"
@@ -17,7 +16,7 @@ class RecipeForm extends Component {
   handleInputChange = event => {
     console.log("I was changed");
     const { name, value } = event.target;
-    // console.log("target hapepend: ", event.target)
+
     this.setState({
       [name]: value
     });
@@ -25,13 +24,6 @@ class RecipeForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log("I did submit");
-    console.log(`Your first name:${this.state.first_name}`);
-    console.log(`Your last name:${this.state.last_name}`);
-    console.log(`Your email:${this.state.email}`);
-    console.log(`Your title:${this.state.title}`);
-    console.log(`Your ingredients:${this.state.ingredients}`);
-    console.log(`Your directions:${this.state.directions}`);
 
     const recipe = {
       user: {
