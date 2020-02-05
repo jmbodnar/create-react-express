@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PageHeader from "./page-header";
-import { addRecipeComment } from "../utilities/api";
 
 class CommentForm extends Component {
   state = {
@@ -11,7 +10,6 @@ class CommentForm extends Component {
 
   handleChange = function(event) {
     const { commentData } = this.state;
-    let prop = event.target.name;
     commentData[event.target.name] = event.target.value;
     this.setState({ commentData });
   };

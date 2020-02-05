@@ -14,7 +14,6 @@ class RecipeForm extends Component {
   };
 
   handleInputChange = event => {
-    console.log("I was changed");
     const { name, value } = event.target;
 
     this.setState({
@@ -38,10 +37,7 @@ class RecipeForm extends Component {
     };
     axios
       .post("/api/recipes", recipe)
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+      .then(res => {})
       .then(() => {
         this.props.history.replace("/");
       });
