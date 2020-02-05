@@ -59,7 +59,7 @@ class RecipeForm extends Component {
     return (
       <React.Fragment>
         <PageHeader title="Add Your Recipe!" />
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={this.handleFormSubmit} className="mb-4">
           <fieldset>
             <legend>Your Information</legend>
             <div className="row">
@@ -174,7 +174,7 @@ class RecipeForm extends Component {
           <input
             type="submit"
             value="Add Your Recipe"
-            className="btn btn-danger btn-block"
+            className="btn btn-primary btn-block"
           />
         </form>
       </React.Fragment>
