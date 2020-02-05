@@ -68,6 +68,7 @@ class Recipes2 extends Component {
               </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
               {this.state.recipes.length
                 ? this.state.recipes.map(r => {
                     return (
@@ -82,6 +83,22 @@ class Recipes2 extends Component {
                     );
                   })
                 : "swhere them recipes"}
+=======
+              {recipes.map(r => {
+                if(r.user){
+                return (
+                  <tr key={r._id}>
+                    <td>
+                      <Link to={"recipe/" + r._id}>{r.title}</Link>
+                    </td>
+                    <td>{r.category}</td>
+                    <td>{r.user.firstname + " " + r.user.lastname}</td>
+                    <td>{r.likes}</td>
+                  </tr>
+                );
+              }
+              })}
+>>>>>>> develop
             </tbody>
           </table> */}
           <MDBDataTable data={this.state.data} />
