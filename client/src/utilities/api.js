@@ -1,14 +1,28 @@
 export async function getRecipes() {
   try {
-    return await (await fetch("http://localhost:3001/api/recipes")).json();
+    return (await fetch("/api/recipes")).json();
   } catch (error) {
     console.error(error);
   }
 }
 
-export async function getRecipeId(id) {
+export async function getRecipeById(id) {
   try {
-    return await (await fetch(`http://localhost:3001/api/recipe/${id}`)).json();
+    return (await fetch(`/api/recipe/${id}`)).json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function addRecipeComment(recipeId, commentData) {
+  try {
+    return await fetch(`/api/comment/${recipeId}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(commentData)
+    });
   } catch (error) {
     console.error(error);
   }

@@ -36,11 +36,15 @@ Content-Type: application/json
     "comments": [
         {
             "user": "Lavar",
-            "text": "I love it"
+            "text": "I love it",
+            "userFname": "Lavar",
+            "userLname": "Cole"
         },
         {
             "user": "Jon",
-            "text": "The original's better"
+            "text": "The original's better",
+            "userFname": "Jonathan",
+            "userLname": "Bodnar"
         }
     ]
 }

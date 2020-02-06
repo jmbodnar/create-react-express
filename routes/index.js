@@ -95,4 +95,24 @@ router.delete("/recipe/:id", function(req, res, next) {
   res.send({ type: "DELETE" });
 });
 
+// ===== Get, Update Recipe's Comments ===== //
+
+// Get all of a a recipe's comments
+router.get("/comment/:id", function(req, res, next) {
+  Recipe.findById({ _id: req.params.id }, req.body).then(function(recipe) {
+    res.json(recipe.comments);
+  });
+});
+
+// Add comment to recipe
+router.post("/comment/:id", function(req, res, next) {
+  Recipe.findByIdAndUpdate(
+    { _id: req.params.id },
+    { $push: { comments: req.body } },
+    { useFindAndModify: false }
+  ).then(function(recipe) {
+    res.json(recipe.comments);
+  });
+});
+
 module.exports = router;
