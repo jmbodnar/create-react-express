@@ -16,7 +16,6 @@ class Recipes extends Component {
 
   render() {
     const { recipes } = this.state;
-    console.log(recipes);
     return (
       <React.Fragment>
         <PageHeader title="All Recipes" />
@@ -32,8 +31,7 @@ class Recipes extends Component {
             </thead>
             <tbody>
               {recipes.map(r => {
-                if(r.user){
-                  return (
+                return (
                   <tr key={r._id}>
                     <td>
                       <Link to={"recipe/" + r._id}>{r.title}</Link>
@@ -44,8 +42,6 @@ class Recipes extends Component {
                     <td>{r.likes}</td>
                   </tr>
                 );
-                }
-                
               })}
             </tbody>
           </table>
