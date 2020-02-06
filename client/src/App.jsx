@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import MainHeader from "./components/main-header";
 import AppNavbar from "./components/nav";
 import Recipes from "./components/recipes";
@@ -11,6 +11,8 @@ import store from './store';
 import { loadUser } from './actions/authActions';
 import { Provider } from "react-redux";
 import { Container } from 'reactstrap';
+import { Router } from "express";
+// import { Router } from "express";
 
 class App extends Component {
   componentDidMount() {
@@ -19,6 +21,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
+        <Router>
         <div className='App'>
           <AppNavbar />
           <Container>
@@ -27,8 +30,10 @@ class App extends Component {
             {/* <Recipe /> */}
             <Recipes />
             {/* <Recipes2 /> */}
+            
           </Container>
         </div>
+        </Router>
       </Provider>
     );
   }
