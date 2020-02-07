@@ -37,6 +37,7 @@ class Recipes extends Component {
                       <Link to={"recipe/" + r._id}>{r.title}</Link>
                     </td>
                     <td>{r.category}</td>
+
                     <td>{r.user.firstname + " " + r.user.lastname}</td>
                     <td>{r.likes}</td>
                   </tr>

@@ -63,8 +63,14 @@ class Recipe extends Component {
             </dl>
           </div>
         </section>
+
         <PageHeader title="Comments" />
         <section className="row list-group">
+          {recipe.comments.length < 1 ? (
+            <div className="alert alert-secondary">
+              "No one has commented on this recipe"
+            </div>
+          ) : null}
           {recipe.comments.map((comment, idx) => {
             return (
               <details className="mb-1 alert alert-secondary" key={idx}>
@@ -80,6 +86,7 @@ class Recipe extends Component {
             );
           })}
         </section>
+
         <CommentForm
           recipeId={recipeId}
           handleSubmission={this.handleSubmission}

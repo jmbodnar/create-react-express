@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PageHeader from "./page-header";
-import { addRecipeComment } from "../utilities/api";
 
 class CommentForm extends Component {
   state = {
@@ -11,7 +10,6 @@ class CommentForm extends Component {
 
   handleChange = function(event) {
     const { commentData } = this.state;
-    let prop = event.target.name;
     commentData[event.target.name] = event.target.value;
     this.setState({ commentData });
   };
@@ -70,7 +68,7 @@ class CommentForm extends Component {
               onChange={this.handleChange.bind(this)}
             ></textarea>
           </div>
-          <button className="btn btn-outline-primary btn-block" type="submit">
+          <button className="btn btn-primary btn-block" type="submit">
             Test Submission
           </button>
         </form>
