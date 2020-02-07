@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { getRecipes } from "../utilities/api";
 import PageHeader from "./page-header";
-import Datatable from "./datatables";
 import { MDBDataTable, MDBBtn } from "mdbreact";
 const $ = require("jquery");
 $.DataTable = require("datatables.net");
