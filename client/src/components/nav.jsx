@@ -15,7 +15,7 @@ import RegisterModal from './auth/registerModal';
 import LoginModal from './auth/loginModal';
 import Logout from './auth/logout';
 
-// import React from "react";
+
 // import { Link } from "react-router-dom";
 
 class AppNavbar extends Component {
@@ -82,16 +82,8 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  null
-)(AppNavbar);
 
-
-
-
-
-// const Nav = props => {
+// const bar = props => {
 //   return (
 //     <nav className="navbar navbar-expand navbar-dark bg-dark sticky-top mb-4">
 //       <div className="container collapse navbar-collapse">
@@ -122,4 +114,11 @@ export default connect(
 //   );
 // };
 
-// export default Nav;
+// export default bar;
+
+export default connect(
+  mapStateToProps,
+  null
+)(AppNavbar);
+
+

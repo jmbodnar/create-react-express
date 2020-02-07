@@ -18,7 +18,7 @@ import { clearErrors } from '../../actions/errorActions';
 
 class RegisterModal extends Component {
   state = {
-    modal: false,
+    modal: true,
     name: '',
     email: '',
     password: '',

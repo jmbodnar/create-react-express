@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import MainHeader from "./components/main-header";
 import AppNavbar from "./components/nav";
 import Recipes from "./components/recipes";
@@ -11,8 +11,8 @@ import store from './store';
 import { loadUser } from './actions/authActions';
 import { Provider } from "react-redux";
 import { Container } from 'reactstrap';
-import { Router } from "express";
 // import { Router } from "express";
+
 
 class App extends Component {
   componentDidMount() {
@@ -25,12 +25,13 @@ class App extends Component {
         <div className='App'>
           <AppNavbar />
           <Container>
-            <UserForm />
-
-            {/* <Recipe /> */}
-            <Recipes />
-            {/* <Recipes2 /> */}
-            
+          <Switch>
+              <Route exact path="/" component={Recipes} />
+              {/* <Route exact path="/recipes2" component={Recipes2} /> */}
+              {/* <Route path="/recipe/:id" component={Recipe} /> */}
+              {/* <Route path="/add-recipe" component={RecipeForm} /> */}
+              <Route path="/add-user" component={UserForm} />
+            </Switch>
           </Container>
         </div>
         </Router>
