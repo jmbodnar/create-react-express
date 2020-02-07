@@ -17,7 +17,6 @@ router.get("/users", function(req, res) {
 
 // Add a new user to the database
 router.post("/users", function(req, res, next) {
-  console.log(req.body);
   User.create(req.body)
     .then(function(user) {
       res.json(user);
@@ -61,7 +60,6 @@ router.get("/recipes", function(req, res) {
 
 // Add a new recipe to the database
 router.post("/recipes", function(req, res, next) {
-  console.log(req.body);
   Recipe.create(req.body)
     .then(function(recipe) {
       res.json(recipe);
