@@ -46,7 +46,7 @@ class RecipeForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageHeader title="Add Your Recipe!" />
+        <PageHeader title="Add Your Recipe" />
         <form onSubmit={this.handleFormSubmit} className="mb-4">
           <fieldset>
             <legend>Your Information</legend>

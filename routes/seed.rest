@@ -5,9 +5,9 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-    "firstname": "Jon",
-    "lastname": "mystery",
-    "email": "email@gmailnet.net"
+    "firstname": "aruna",
+    "lastname": "password1",
+    "email": "email@gmail.net"
 }
 
 ###
@@ -45,6 +45,37 @@ Content-Type: application/json
             "text": "The original's better",
             "userFname": "Jonathan",
             "userLname": "Bodnar"
+        }
+    ]
+}
+
+
+
+{
+    "title": "Classic Stuffed Mushrooms",
+    "category": "entree",
+    "ingredients": [
+        "walnuts",
+        "herbs",
+        " garlic",
+        "chopped mushroom stems",
+        "breadcrumbs",
+        "grated parmesean"
+    ],
+    "directions": "Separate the stems from the mushroom caps and chop them. Process with herbs and breadcrumbs and stuff the mushroom caps with the mixture. Sprinkle with parmesan and bake until the cheese starts to brown and the mushroom caps release some of their water.",
+    "likes": 2,
+    "user": {
+        "firstname": "Levar",
+        "lastname": "Burton"
+    },
+    "comments": [
+        {
+            "user": "Lavar",
+            "text": "I love it"
+        },
+        {
+            "user": "Jon",
+            "text": "The original's better"
         }
     ]
 }

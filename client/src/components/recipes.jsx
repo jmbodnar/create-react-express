@@ -10,6 +10,7 @@ class Recipes extends Component {
 
   componentDidMount() {
     getRecipes().then(recipes => {
+      console.log("x", recipes);
       this.setState({ recipes });
     });
   }

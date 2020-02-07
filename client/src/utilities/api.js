@@ -30,7 +30,7 @@ export async function addRecipeComment(recipeId, commentData) {
 
 export async function addUser(user) {
   try {
-    return await fetch(`/api//users`, {
+    return await fetch(`/api/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

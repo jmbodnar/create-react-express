@@ -31,7 +31,7 @@ class UserForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageHeader title="Add Yourself!" />
+        <PageHeader title="Register/Login" />
         <form onSubmit={this.handleSubmit} className="mb-4">
           {" "}
           <fieldset>

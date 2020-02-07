@@ -1,51 +1,62 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { getRecipes } from "../utilities/api";
 import PageHeader from "./page-header";
+import { MDBDataTable, MDBBtn } from "mdbreact";
+const $ = require("jquery");
+$.DataTable = require("datatables.net");
 
 class Recipes2 extends Component {
   state = {
+    data: {},
     recipes: []
   };
+  config = [
+    {
+      label: "Recipe",
+      field: "button",
+      sort: "asc",
+      width: 150
+    },
+    {
+      label: "Category",
+      field: "category",
+      sort: "asc",
+      width: 270
+    },
+    {
+      label: "User",
+      field: "userString",
 
-  componentDidMount() {
+      sort: "asc",
+      width: 200
+    }
+  ];
+
+  componentDidMount = () => {
     getRecipes().then(recipes => {
-      this.setState({ recipes });
+      recipes.forEach(recipe => {
+        recipe.clickEvent = () => this.handleClick(recipe._id);
+        recipe.button = (
+          <MDBBtn href={`/recipe/${recipe._id}`}>{recipe.title}</MDBBtn>
+        );
+        recipe.userString = recipe.user.firstname + " " + recipe.user.lastname;
+      });
+      this.setState({ recipes: recipes });
+      this.setState({ data: { rows: recipes, columns: this.config } });
     });
-  }
+  };
+
+  handleClick = id => {
+    console.log(id);
+    window.location = "/recipe/" + id;
+  };
 
   render() {
-    const { recipes } = this.state;
     return (
       <React.Fragment>
         <PageHeader title="All Recipes" />
         <div className="table-responsive">
-          <table className="table table-striped table-borderless table-hover">
-            <thead className="thead-light">
-              <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>User</th>
-                <th>Likes</th>
-              </tr>
-            </thead>
-            <tbody>
-              {recipes.map(r => {
-                if(r.user){
-                return (
-                  <tr key={r._id}>
-                    <td>
-                      <Link to={"recipe/" + r._id}>{r.title}</Link>
-                    </td>
-                    <td>{r.category}</td>
-                    <td>{r.user.firstname + " " + r.user.lastname}</td>
-                    <td>{r.likes}</td>
-                  </tr>
-                );
-              }
-              })}
-            </tbody>
-          </table>
+          <MDBDataTable data={this.state.data} />
         </div>
       </React.Fragment>
     );

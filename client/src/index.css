@@ -1,0 +1,8 @@
+.Ripple-parent {
+  color: #007bff;
+}
+
+.Ripple-parent:hover {
+  cursor: pointer;
+  color: #014fd7;
+}
