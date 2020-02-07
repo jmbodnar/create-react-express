@@ -1,10 +1,8 @@
 .Ripple-parent {
-  text-decoration: underline;
-  color: #005eff;
+  color: #007bff;
 }
 
 .Ripple-parent:hover {
   cursor: pointer;
-  text-decoration: underline;
   color: #014fd7;
 }
