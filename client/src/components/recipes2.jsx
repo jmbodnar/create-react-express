@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { getRecipes } from "../utilities/api";
 import PageHeader from "./page-header";
 import Datatable from "./datatables";
-import { MDBDataTable } from "mdbreact";
+import { MDBDataTable, MDBBtn } from "mdbreact";
 const $ = require("jquery");
 $.DataTable = require("datatables.net");
 
@@ -15,7 +15,10 @@ class Recipes2 extends Component {
   config = [
     {
       label: "Title",
-      field: "title",
+      field: "button",
+      attributes: {
+        style: { color: "green" }
+      },
       sort: "asc",
       width: 150
     },
@@ -27,7 +30,7 @@ class Recipes2 extends Component {
     },
     {
       label: "User",
-      field: "user[firstname]",
+      field: "userString",
 
       sort: "asc",
       width: 200
@@ -43,10 +46,24 @@ class Recipes2 extends Component {
   componentDidMount = () => {
     console.log("1", this);
     getRecipes().then(recipes => {
-      console.log("2", this);
+      console.log("2", recipes);
+      recipes.forEach(recipe => {
+        recipe.clickEvent = () => this.handleClick(recipe._id);
+        recipe.button = (
+          <MDBBtn href={`/recipe/${recipe._id}`} color="primary">
+            {recipe.title}
+          </MDBBtn>
+        );
+        recipe.userString = recipe.user.firstname + recipe.user.lastname;
+      });
       this.setState({ recipes: recipes });
       this.setState({ data: { rows: recipes, columns: this.config } });
     });
+  };
+
+  handleClick = id => {
+    console.log(id);
+    window.location = "/recipe/" + id;
   };
 
   render() {
@@ -68,7 +85,6 @@ class Recipes2 extends Component {
               </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
               {this.state.recipes.length
                 ? this.state.recipes.map(r => {
                     return (
@@ -83,22 +99,6 @@ class Recipes2 extends Component {
                     );
                   })
                 : "swhere them recipes"}
-=======
-              {recipes.map(r => {
-                if(r.user){
-                return (
-                  <tr key={r._id}>
-                    <td>
-                      <Link to={"recipe/" + r._id}>{r.title}</Link>
-                    </td>
-                    <td>{r.category}</td>
-                    <td>{r.user.firstname + " " + r.user.lastname}</td>
-                    <td>{r.likes}</td>
-                  </tr>
-                );
-              }
-              })}
->>>>>>> develop
             </tbody>
           </table> */}
           <MDBDataTable data={this.state.data} />
