@@ -27,3 +27,17 @@ export async function addRecipeComment(recipeId, commentData) {
     console.error(error);
   }
 }
+
+export async function addUser(user) {
+  try {
+    return await fetch(`/api//users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
