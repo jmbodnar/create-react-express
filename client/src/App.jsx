@@ -17,8 +17,8 @@ class App extends Component {
           <Nav />
           <main className="container">
             <Switch>
-              <Route exact path="/" component={Recipes} />
-              <Route exact path="/recipes2" component={Recipes2} />
+              <Route exact path="/" component={Recipes2} />
+              {/* <Route exact path="/recipes2" component={Recipes2} /> */}
               <Route path="/recipe/:id" component={Recipe} />
               <Route path="/add-recipe" component={RecipeForm} />
               <Route path="/add-user" component={UserForm} />

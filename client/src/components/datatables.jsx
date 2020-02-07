@@ -84,8 +84,4 @@ class Table extends Component {
   }
 }
 
-// Table.PropTypes = {
-//   names: React.PropTypes.array
-// };
-
 export default Table;

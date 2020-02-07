@@ -41,7 +41,7 @@ class Recipes2 extends Component {
         recipe.button = (
           <MDBBtn href={`/recipe/${recipe._id}`}>{recipe.title}</MDBBtn>
         );
-        recipe.userString = recipe.user.firstname + recipe.user.lastname;
+        recipe.userString = recipe.user.firstname + " " + recipe.user.lastname;
       });
       this.setState({ recipes: recipes });
       this.setState({ data: { rows: recipes, columns: this.config } });
