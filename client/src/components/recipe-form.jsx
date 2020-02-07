@@ -53,7 +53,7 @@ class RecipeForm extends Component {
             <div className="row">
               <div className="col-6">
                 <div className="form-group">
-                  <label for="first_name">First Name</label>
+                  <label htmlFor="first_name">First Name</label>
                   <input
                     className="form-control"
                     type="text"
@@ -67,7 +67,7 @@ class RecipeForm extends Component {
               </div>
               <div className="col-6">
                 <div className="form-group">
-                  <label for="last_name">Last Name</label>
+                  <label htmlFor="last_name">Last Name</label>
                   <input
                     className="form-control"
                     type="text"
@@ -81,7 +81,7 @@ class RecipeForm extends Component {
               </div>
             </div>
             <div className="form-group">
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 className="form-control"
                 type="email"
@@ -96,7 +96,7 @@ class RecipeForm extends Component {
           <fieldset>
             <legend>Recipe Information</legend>
             <div className="form-group">
-              <label for="title">Name of Recipe</label>
+              <label htmlFor="title">Name of Recipe</label>
               <input
                 type="text"
                 className="form-control"
@@ -117,7 +117,7 @@ class RecipeForm extends Component {
               </datalist>
             </div>
             <div className="form-group">
-              <label for="ingredients">Ingredients</label>
+              <label htmlFor="ingredients">Ingredients</label>
               <input
                 type="text"
                 className="form-control"
@@ -134,7 +134,7 @@ class RecipeForm extends Component {
               </small>
             </div>
             <div className="form-group">
-              <label for="exampleFormControlSelect1">Recipe Category</label>
+              <label htmlFor="exampleFormControlSelect1">Recipe Category</label>
               <select
                 className="form-control"
                 id="category"
@@ -148,7 +148,7 @@ class RecipeForm extends Component {
               </select>
             </div>
             <div className="form-group">
-              <label for="exampleFormControlTextarea1">Directions</label>
+              <label htmlFor="exampleFormControlTextarea1">Directions</label>
               <textarea
                 className="form-control"
                 id="directions"
