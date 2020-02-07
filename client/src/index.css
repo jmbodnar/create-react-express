@@ -1,0 +1,10 @@
+.Ripple-parent {
+  text-decoration: underline;
+  color: #005eff;
+}
+
+.Ripple-parent:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #014fd7;
+}
