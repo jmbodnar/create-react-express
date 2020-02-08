@@ -36,6 +36,8 @@ export async function addUser(user) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(user)
+    }).then(() => {
+      sessionStorage.setItem("user", JSON.stringify(user));
     });
   } catch (error) {
     console.error(error);

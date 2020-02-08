@@ -23,6 +23,9 @@ const RecipeSchema = new Schema({
     },
     lastname: {
       type: String
+    },
+    email: {
+      type: String
     }
   },
 
