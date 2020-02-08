@@ -28,10 +28,11 @@ export async function addRecipeComment(recipeId, commentData) {
   }
 }
 
-export async function addUser(user) {
+export async function addUser(email, user) {
+  sessionStorage.setItem("user", JSON.stringify(user));
   try {
-    return await fetch(`/api/users`, {
-      method: "POST",
+    return await fetch(`/api/users/${email}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },

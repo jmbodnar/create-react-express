@@ -31,9 +31,12 @@ router.get("/users/:id", function(req, res, next) {
   });
 });
 
-// Update a user in the database
-router.put("/users/:id", function(req, res, next) {
-  User.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function(user) {
+// Register, update user in the db by email
+router.put("/users/:email", function(req, res, next) {
+  User.findOneAndUpdate({ email: req.params.email }, req.body, {
+    new: true,
+    upsert: true
+  }).then(function(user) {
     res.json(user);
   });
 });
