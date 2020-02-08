@@ -7,7 +7,8 @@ export const fakeAuth = {
     setTimeout(cb, 1000); // Fake an async call
   },
   signout(cb) {
-    sessionStorage.setItem("isAuthenticated", "false");
+    sessionStorage.removeItem("isAuthenticated");
+    sessionStorage.removeItem("user");
     setTimeout(cb, 1000); // Fake an async call
   }
 };
