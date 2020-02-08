@@ -6,6 +6,7 @@ import Recipe from "./components/recipe";
 import RecipeForm from "./components/recipe-form";
 import UserForm from "./components/user-form";
 import Recipes2 from "./components/recipes2";
+import ProtectedRoute from './components/protected-route';
 
 class App extends Component {
   render() {
@@ -17,9 +18,10 @@ class App extends Component {
           <main className="container">
             <Switch>
               <Route exact path="/" component={Recipes2} />
-
-              <Route path="/recipe/:id" component={Recipe} />
-              <Route path="/add-recipe" component={RecipeForm} />
+              <ProtectedRoute path="/recipe/:id" component={Recipe} />
+              <ProtectedRoute path="/add-recipe" component={RecipeForm} />
+              {/* <Route path="/recipe/:id" component={Recipe} />
+              <Route path="/add-recipe" component={RecipeForm} /> */}
               <Route path="/add-user" component={UserForm} />
             </Switch>
           </main>
