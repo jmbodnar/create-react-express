@@ -12,5 +12,5 @@ const store = createStore(
   initialState,
   composeEnhancers(applyMiddleware(...middleWare))
 );
-
+// const history = syncHistoryWithStore(browserHistory, store)
 export default store;

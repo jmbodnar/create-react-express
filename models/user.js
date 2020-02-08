@@ -22,6 +22,10 @@ const userSchema = new Schema({
     min: 6,
     max: 255
   },
+  password: {
+    type: String,
+    required: true
+  },
 
   dateAdded: {
     type: Date,

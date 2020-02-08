@@ -5,12 +5,13 @@ import AppNavbar from "./components/nav";
 import Recipes from "./components/recipes";
 // import Recipe from "./components/recipe";
 // import RecipeForm from "./components/recipe-form";
-import UserForm from "./components/user-form";
+// import UserForm from "./components/user-form";
 // import Recipes2 from "./components/recipes2";
 import store from './store';
 import { loadUser } from './actions/authActions';
 import { Provider } from "react-redux";
 import { Container } from 'reactstrap';
+// import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 // import { Router } from "express";
 
 
@@ -30,7 +31,7 @@ class App extends Component {
               {/* <Route exact path="/recipes2" component={Recipes2} /> */}
               {/* <Route path="/recipe/:id" component={Recipe} /> */}
               {/* <Route path="/add-recipe" component={RecipeForm} /> */}
-              <Route path="/add-user" component={UserForm} />
+              {/* <Route path="/add-user" component={UserForm} /> */}
             </Switch>
           </Container>
         </div>
