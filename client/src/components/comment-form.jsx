@@ -68,7 +68,7 @@ class CommentForm extends Component {
               onChange={this.handleChange.bind(this)}
             ></textarea>
           </div>
-          <button className="btn btn-primary btn-block" type="submit">
+          <button className="btn btn-danger btn-block" type="submit">
             Test Submission
           </button>
         </form>

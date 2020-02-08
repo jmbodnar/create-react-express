@@ -67,13 +67,13 @@ class Recipe extends Component {
         <PageHeader title="Comments" />
         <section className="row list-group">
           {recipe.comments.length < 1 ? (
-            <div className="alert alert-secondary">
+            <div className="alert alert-light">
               "No one has commented on this recipe"
             </div>
           ) : null}
           {recipe.comments.map((comment, idx) => {
             return (
-              <details className="mb-1 alert alert-secondary" key={idx}>
+              <details className="mb-1 alert alert-light" key={idx}>
                 <summary>
                   {comment.userFname ? comment.userFname : comment.user}{" "}
                   {comment.userLname ? comment.userLname : null} (

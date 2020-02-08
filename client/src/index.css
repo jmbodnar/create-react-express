@@ -1,8 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes&display=swap");
+
+body {
+background: linear-gradient(hsla(0, 0%, 100%, 0.8) 0%, hsla(0, 0%, 100%, 0.8) 100%), url("https://source.unsplash.com/random/?seasons") no-repeat fixed center center / cover; padding-top: 2rem;
+}
+
+h1{
+font-family: "Great Vibes", cursive;
+}
+
+h2 {
+text-align: center;
+color: red;
+margin-bottom: 4rem;
+font-size: 1.875rem;
+}
+
 .Ripple-parent {
-  color: #007bff;
+  color:red;
 }
 
 .Ripple-parent:hover {
   cursor: pointer;
-  color: #014fd7;
+  color: #212529
+}
+
+.jumbotron{
+  background: none;
+ 
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.table {
+  color: red;
+}
+
+th {
+  color:#212529;
+}
+
+.page-item.active .page-link {
+  background: red;
+  border: #212529;
+}
+
+.navbar a{
+color: white;
 }
