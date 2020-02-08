@@ -92,7 +92,7 @@ class UserForm extends Component {
             <input
               type="submit"
               value="Register"
-              className="btn btn-primary btn-block"
+              className="btn btn-danger btn-block"
             />
           </form>
         </React.Fragment>

@@ -162,7 +162,7 @@ class RecipeForm extends Component {
           <input
             type="submit"
             value="Add Your Recipe"
-            className="btn btn-primary btn-block"
+            className="btn btn-danger btn-block"
           />
         </form>
       </React.Fragment>

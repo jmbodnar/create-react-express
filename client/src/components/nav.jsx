@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Nav = props => {
   return (
-    <nav className="navbar navbar-expand navbar-dark bg-dark sticky-top mb-4">
+    <nav className="navbar navbar-expand navbar bg-danger sticky-top mb-4">
       <div className="container collapse navbar-collapse">
         <ul className="navbar-nav">
           <li className="nav-item">
