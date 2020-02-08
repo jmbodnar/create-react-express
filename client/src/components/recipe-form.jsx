@@ -27,9 +27,9 @@ class RecipeForm extends Component {
     const recipe = {
       user: {
         firstname: this.state.first_name,
-        lastname: this.state.last_name
+        lastname: this.state.last_name,
+        email: this.state.email
       },
-      email: this.state.email,
       title: this.state.title,
       ingredients: this.state.ingredients,
       category: this.state.category,
