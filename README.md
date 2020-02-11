@@ -22,6 +22,31 @@ View the [project board](https://github.com/jmbodnar/create-react-express/projec
 
 Link to [notes for readme](https://drive.google.com/file/d/0B7lunJ3CJPuMTzNodmRRUUg1dmtpeXNnbzU2Z2sxRXUwMG0w/view)
 
+
+### Obstacles For Project Scope
+- what is the best way to provide authentication and user persistence?
+- React… What strategies to use in terms of Components and overall structure? 
+- What data needs to be stored? 
+- What key:value pairs should be initialized in schemas? 
+- How should data be accessed by front end? 
+- Heroku Deployment Collaboration… How to join parts of code into one?
+
+
+### Future Scope of App
+Possible future Scope includes:
+-> User specific profile pages upon login 
+-> Users having ability to follow/ subscribe to other members’ page or recipes
+-> Users receiving suggested recipes based on prior searches or likes
+-> Users having different designations based on # of recipes submitted or types of recipes submitted
+-> Incorporating more food categories than are currently available
+
+
+
+
+
+
+
+
 ## About This Boilerplate
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
