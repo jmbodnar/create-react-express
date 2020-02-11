@@ -23,7 +23,7 @@ class UserForm extends Component {
       email: this.state.email
     };
 
-    addUser(user).then(() => {
+    addUser(user.email, user).then(() => {
       fakeAuth.authenticated(() => {
         this.props.history.replace("/");
       });
