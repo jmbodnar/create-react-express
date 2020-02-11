@@ -12,15 +12,40 @@ View the [project board](https://github.com/jmbodnar/create-react-express/projec
 - [npn cors package](https://www.npmjs.com/package/cors) to handle CORS problems
 - [JSONPlaceholder](https://jsonplaceholder.typicode.com/), [My JSON Server](https://my-json-server.typicode.com/), and [json-server](https://www.npmjs.com/package/json-server) for early prototyping
 - [HTML Details Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) for comment disclosure
-- [MongoDB]()
-- [ExpressJS]()
-- [ReactJS]()
+- [MongoDB]() Database for storing and manipulating data for application
+- [ExpressJS]() Allows for creation of Rest API Server and defining routes for the application based on HTTP methods and URLs
+- [ReactJS]() Javascript library that presents Component-based approach to User Interface
 - [NodeJS]()
-- [axiox]()
-
+- [Axios]()
+- [RESTClient]-Allows you to send HTTP request and view the response in Visual Studio Code direct
 <hr />
 
 Link to [notes for readme](https://drive.google.com/file/d/0B7lunJ3CJPuMTzNodmRRUUg1dmtpeXNnbzU2Z2sxRXUwMG0w/view)
+
+
+### Obstacles For Project Scope
+- what is the best way to provide authentication and user persistence?
+- React… What strategies to use in terms of Components and overall structure? 
+- What data needs to be stored? 
+- What key:value pairs should be initialized in schemas? 
+- How should data be accessed by front end? 
+- Heroku Deployment Collaboration… How to join parts of code into one?
+
+
+### Future Scope of App
+Possible future Scope includes:
+* User specific profile pages upon login 
+* Users having ability to follow/ subscribe to other members’ page or recipes
+* Users receiving suggested recipes based on prior searches or likes
+* Users having different designations based on # of recipes submitted or types of recipes submitted
+* Incorporating more food categories than are currently available
+
+
+
+
+
+
+
 
 ## About This Boilerplate
 
