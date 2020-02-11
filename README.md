@@ -34,11 +34,11 @@ Link to [notes for readme](https://drive.google.com/file/d/0B7lunJ3CJPuMTzNodmRR
 
 ### Future Scope of App
 Possible future Scope includes:
--> User specific profile pages upon login 
--> Users having ability to follow/ subscribe to other members’ page or recipes
--> Users receiving suggested recipes based on prior searches or likes
--> Users having different designations based on # of recipes submitted or types of recipes submitted
--> Incorporating more food categories than are currently available
+* User specific profile pages upon login 
+* Users having ability to follow/ subscribe to other members’ page or recipes
+* Users receiving suggested recipes based on prior searches or likes
+* Users having different designations based on # of recipes submitted or types of recipes submitted
+* Incorporating more food categories than are currently available
 
 
 
