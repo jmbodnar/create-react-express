@@ -21,7 +21,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "cors": "^2.8.5",
-    "datatables.net": "^1.10.20",
+    "datatables.net": "^1.10.22",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "jquery": "^3.4.1",
